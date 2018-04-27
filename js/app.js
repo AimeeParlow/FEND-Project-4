@@ -6,7 +6,15 @@ var Enemy = function() {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
+    this.x = 0;
+    this.y = 60;
+	this.rowPosition = Math.floor(Math.random()*3);
+	console.log('rowPosition' + this.rowPosition)
+    this.speed = Math.floor(Math.random()*220)+80; //minimum speed 80
+
 };
+
+Enemy.prototype = new Enemy();
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -14,21 +22,75 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+    this.x = this.x + dt * this.speed;
+	
+	if (this.rowPosition === 0) {
+		this.y = 60;
+	} else if (this.rowPosition === 1) {
+		this.y = 145;
+	} else {
+		this.y = 230;
+	}
 };
 
 // Draw the enemy on the screen, required method for game
+
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+
+
+
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+var Player = function() {
+
+    this.sprite = 'images/char-cat-girl.png';
+    this.x = 200;
+    this.y = 400;
+
+};
+
+Player.prototype = new Player();
+
+
+Player.prototype.handleInput = function(key){
+
+	if (key === 'left') {
+	console.log('left');
+	this.x = this.x - 100;
+	} else if (key === 'right') {
+		console.log('right');
+		this.x = this.x + 100;
+		
+	} else if (key === 'up') {
+		console.log('up');
+		this.y = this.y - 85;
+	} else {
+		console.log('down');
+		this.y = this.y + 85;
+	}
+}
+
+Player.prototype.update = function() {
+	
+};
+
+
+Player.prototype.render = function(){
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+}
+
+
 
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+    let allEnemies = [new Enemy(), new Enemy(), new Enemy(), new Enemy()];
 // Place the player object in a variable called player
+    let player = new Player();
 
 
 

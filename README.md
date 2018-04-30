@@ -10,7 +10,7 @@ The player have to go across the dangerous street to the river three times.
 
 ## Installation
 
-you can try the from [HERE](https://aimeeparlow.github.io/FEND-Project-4/)
+you can try the game [HERE](https://aimeeparlow.github.io/FEND-Project-4/)
 
 or
 

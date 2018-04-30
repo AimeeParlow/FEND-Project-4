@@ -4,6 +4,10 @@ body {
 	font-family: 'Meiryo', sans-serif;
 }
 
+h2 {
+	color: red;
+}
+
 #message-area {
 	display: none; 
 }

@@ -1,3 +1,7 @@
+/*
+ * VARIABLES for display game result
+ */
+ 
 const messageDisplay = document.getElementById('message-area');  
 const heartCountDisplay = document.getElementById('heart'); 
 const SucceededCountDisplay = document.getElementById('Succeeded');
@@ -34,7 +38,7 @@ Enemy.prototype.update = function(dt) {
 	checkCollisions(this);	
 }
 
-Enemy.prototype.render = function() {
+Enemy.prototype.render = function() { //to show enemies
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
@@ -55,7 +59,7 @@ var Player = function() {
 
 Player.prototype = new Player();
 
-Player.prototype.handleInput = function(key){
+Player.prototype.handleInput = function(key){ //to set the position of the player by pressing direction keys
 
 	if(key === 'left') {
 		this.x = this.x - 100;
@@ -86,7 +90,7 @@ Player.prototype.update = function() {
 	}
 };
 
-Player.prototype.render = function(){
+Player.prototype.render = function(){ //to show the player icon
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
@@ -183,7 +187,7 @@ function checkCollisionHeart(aHeart){ //to check if the player touched the heart
 	}
 }
 
-function reachedRiver(player) { //success to arrive at the river 
+function reachedRiver(player) { //when success to arrive at the river 
 	player.reachedCount ++;
 	SucceededCountDisplay.textContent = player.reachedCount;
 	allEnemies = [new Enemy(), new Enemy(), new Enemy(), new Enemy()]; //reborn enemies

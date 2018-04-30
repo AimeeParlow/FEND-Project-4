@@ -194,7 +194,7 @@ function checkGameOver() { //to check if the game is over
 	if (player.heartPoint === 0) {
 		messageDisplay.innerHTML = "<b>GAME OVER!</b>";
 		messageDisplay.style.display = 'block';
-		setTimeout(function(){allReset()},2000);
+		setTimeout(function(){allReset()},1000);
 	}
 }
 
@@ -202,7 +202,7 @@ function checkGameClear() { //to check if the game is clear
 	if(player.reachedCount === 3) {
 		messageDisplay.innerHTML = "<b>YOU WON!</b>";
 		messageDisplay.style.display = 'block';
-		setTimeout(function(){allReset()},2000);
+		setTimeout(function(){allReset()},1000);
 	} else {
 		originalPosition();
 		heart = new Heart();

@@ -1,6 +1,47 @@
-frontend-nanodegree-arcade-game
-===============================
+# Aimée's Frogger Game
+This game is a simple version of frogger game based on Udacity's ["frontend-nanodegree-arcade-game"](https://github.com/udacity/frontend-nanodegree-arcade-game).
+The player have to go across the dangerous street to the river three times. 
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Table of Contents
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* [Installation](#Installation)
+* [Instructions](#Instructions)
+* [License](#License)
+
+## Installation
+
+You can download all related files from [Github-AimeeParlow](https://github.com/AimeeParlow/FEND-Project-4.git)
+
+Please make sure that you have:
+- index.html
+- css/style.css
+- js/app.js
+- js/engine.js
+- js/resources.js
+- img/char-cat-girl.png
+- img/enemy-bug.png
+- img/Heart.png
+- img/water-block.png
+- img/stone-block.png
+- img/grass-block.png
+- README.md (this file)
+
+Please open 
+```
+index.html
+```
+and you are ready to start the game.
+
+## Instructions
+
+- Control the girl icon by using direction keys and go across the street carefully avoiding enemy bugs that come randomly.
+- If you reach the river, you come back to the default position automatically and gain one "Succeeded Point".
+- When you gain 3 Succeeded Point and you win.
+- You have 2 "Heart Points" at the beginning. If you touch an enemy, you lose one of your Heart Points and come back to the default position automatically.
+- If you lose all Heart Points and the game is over.
+- You have a chance to charge one Heart Point by catching a heart on the street. Another heart will be appeared when you reach the river.
+
+## License
+
+Modified and added some features by
+Ai Parlow

@@ -1,3 +1,26 @@
 body {
     text-align: center;
+	background-color: #f2e99d;
+	font-family: 'Meiryo', sans-serif;
+}
+
+#message-area {
+	display: none; 
+}
+
+#score {
+	border: 2px;
+	border-color: red;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;	
+}
+
+#heart-count {
+	margin-right: 20px;
+}
+
+#Succeeded-count {
+	margin-left: 20px;
 }

@@ -90,11 +90,16 @@ var Engine = (function(global) {
      * render methods.
      */
     function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {
+        heart.update();
+		allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
         player.update();
-    }
+        }	
+		
+    
+	
+	
 
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
@@ -149,7 +154,9 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
-        allEnemies.forEach(function(enemy) {
+        heart.render();
+		
+		allEnemies.forEach(function(enemy) {
             enemy.render();
         });
 
@@ -174,7 +181,9 @@ var Engine = (function(global) {
         'images/grass-block.png',
         'images/enemy-bug.png',
         'images/char-boy.png',
-		'images/char-cat-girl.png'
+		'images/char-cat-girl.png',
+		'images/Gem-Blue.png',
+		'images/Heart.png'
     ]);
     Resources.onReady(init);
 
